@@ -1,0 +1,333 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.font-h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+}
+.principal{
+    display: flex;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-height: 100vh;
+    background: #DDDDDD;
+}
+.login{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: #8294C4;
+    border-radius: 8px;
+    overflow: hidden;
+}
+@media (max-width: 760px) {
+    .principal{
+        flex-direction: column;
+    }
+    .login{
+        width: 300px;
+        height: 350px;
+    }
+    .login::before{
+        width: 300px;
+        height: 350px;
+    }
+    .login::after{
+        width: 300px;
+        height: 350px;   
+    }
+    .borderLine::before{
+        width: 300px;
+        height: 350px;  
+    }
+    .borderLine::after{
+        width: 300px;
+        height: 350px;  
+    }
+    .container{
+        width: 100%;
+        background-image: url(./consultorio.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .login form{
+        padding: 40px 15px;
+     }
+      .login form  input[type="submit"]{
+        margin: 10px auto;
+     }
+}
+@media (max-width: 840px) {
+    .principal{
+        flex-direction: column;
+    }
+    .login{
+        width: 300px;
+        height: 450px;
+    }
+    .login::before{
+        width: 300px;
+        height: 450px;
+    }
+    .login::after{
+        width: 300px;
+        height: 450px;   
+    }
+    .borderLine::before{
+        width: 300px;
+        height: 450px;  
+    }
+    .borderLine::after{
+        width: 300px;
+        height: 450px;  
+    }
+    .container{
+        width: 100%;
+        background-image: url(./consultorio.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .login form .inputLogin{
+        width: 100% !important;
+     }
+     .login form{
+        padding: 40px 15px;
+     }
+     .login form  input[type="submit"]{
+        margin: 10px auto;
+     }
+   
+}
+@media (max-width: 380px) {
+    .principal{
+        flex-direction: column;
+    }
+    .login{
+        width: 250px;
+        height: 450px;  
+    }
+    .login::before{
+        width: 250px;
+        height: 450px;  
+    }
+    .login::after{
+        width: 250px;
+        height: 450px;  
+    }
+    .borderLine::before{
+        width: 250px;
+        height: 450px;  
+    }
+    .borderLine::after{
+        width: 250px;
+        height: 450px;  
+    }
+    .container{
+        width: 100%;
+        background-image: url(./consultorio.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .login form h1{
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+     .login form .inputLogin{
+        width: 100% !important;
+     }
+     .login form{
+        padding: 40px 15px;
+     }
+     .login form  input[type="submit"]{
+        margin: 10px auto;
+     }
+}
+.login::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 450px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #3E54AC,#3E54AC,#3E54AC);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+}
+.login::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 450px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #3E54AC,#3E54AC,#3E54AC);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 450px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #FFF,#FFF,#FFF);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 450px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, transparent, #FFF,#FFF,#FFF);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.login form{
+    position: absolute;
+    inset: 4px;
+    background: #8294C4;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.login form h1{
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.2em;
+    border-bottom: 2rem;margin-bottom: 30px;
+}
+
+.login form .inputLogin{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.login form .inputLogin input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    transition: .5s;
+    font-size: .75em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    z-index: 10;
+}
+.login form .inputLogin span{
+    position: absolute;
+     left: 0;
+     padding: 20px 0px 10px;
+     pointer-events: none;
+     color: #fff;
+     font-size: 1em;
+     font-family: 'Roboto Slab', serif;
+     font-weight: 500;
+     letter-spacing: 0.5em;
+     transition: .5s;
+}
+.login form .inputLogin input:valid ~ span,
+.login form .inputLogin input:focus ~ span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+.login form .inputLogin i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.login form .inputLogin input:valid ~ i,
+.login form .inputLogin input:focus ~ i{
+    height: 44px;
+    border-radius: 8px;
+}
+.login form .link{
+    display: flex;
+}
+.login form .link a{
+    margin: 16px 0px;
+    font-size: 0.75em;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+} 
+.login form .link a:hover {
+        color: #fff;
+}
+.login form  input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 140px;
+    margin-top: 10px;
+}
+.login form  input[type="submit"]:active{
+    opacity: 0.8;
+}
+.imagen{
+    background-image: url(./consultorio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50%;
+}
+
+
+
